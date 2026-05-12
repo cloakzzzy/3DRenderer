@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{f03d8dfc-7cec-447f-b688-64f8a5302ed9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Window">
+      <UniqueIdentifier>{de0def63-f68b-467a-b164-ca92cfb507c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene">
+      <UniqueIdentifier>{43468043-fdd6-47ae-8b5f-10a7365b6678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenGLRelated">
+      <UniqueIdentifier>{8f630246-91fb-4e4d-9f9d-ba13858d7245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Primitives">
+      <UniqueIdentifier>{fce0651f-bd80-426b-9d35-83fd45503527}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Entity">
+      <UniqueIdentifier>{a6d1128a-7303-419c-bf51-42795d256238}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Primitives\Sphere">
+      <UniqueIdentifier>{1ee7368b-7223-4b16-bfd0-838f1389f81f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Camera">
+      <UniqueIdentifier>{ba25840b-6fed-48dc-b270-f6675998f7b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Lights">
+      <UniqueIdentifier>{7e3d8fc8-fca2-4237-8eca-9d46ace2862d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenGLRelated\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Engine\Primitives\Box">
+      <UniqueIdentifier>{913c8425-ebaa-4b44-aba8-d8fac11292c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>OpenGLRelated\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Engine\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Engine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLBuffer.cpp">
+      <Filter>OpenGLRelated</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Engine\Primitives\Sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Engine\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionalLight.cpp">
+      <Filter>Engine\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp">
+      <Filter>Engine\Primitives\Box</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine.hpp">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.hpp">
+      <Filter>Engine\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.hpp">
+      <Filter>Engine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLBuffer.hpp">
+      <Filter>OpenGLRelated</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLBuffers.hpp">
+      <Filter>OpenGLRelated</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLShader.hpp">
+      <Filter>OpenGLRelated</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityAttribute.hpp">
+      <Filter>Engine\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.hpp">
+      <Filter>Engine\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.hpp">
+      <Filter>Engine\Primitives\Sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.hpp">
+      <Filter>Engine\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionalLight.hpp">
+      <Filter>Engine\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="Box.hpp">
+      <Filter>Engine\Primitives\Box</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vert.vert" />
+    <None Include="frag.frag" />
+    <None Include="sphere.vert">
+      <Filter>Engine\Primitives\Sphere</Filter>
+    </None>
+    <None Include="sphere.frag">
+      <Filter>Engine\Primitives\Sphere</Filter>
+    </None>
+    <None Include="FloorShader.vert" />
+    <None Include="FloorShader.frag" />
+    <None Include="depthshader_sphere.vert">
+      <Filter>Engine\Primitives\Sphere</Filter>
+    </None>
+    <None Include="depthshader.frag" />
+    <None Include="floorshader_depth.vert" />
+    <None Include="Box.vert">
+      <Filter>Engine\Primitives\Box</Filter>
+    </None>
+    <None Include="Box.frag">
+      <Filter>Engine\Primitives\Box</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="codewithlights.txt" />
+  </ItemGroup>
+</Project>
