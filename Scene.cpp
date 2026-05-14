@@ -102,4 +102,8 @@ void e_Scene::Remove(e_Sphere& sphere) {
 	sphere.Remove(*this);
 }
 
+void e_Scene::Remove(e_Box& box) {
+	box.Remove(*this);
+}
+
 

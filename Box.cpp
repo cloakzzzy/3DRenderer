@@ -66,6 +66,10 @@ e_Box::e_Box(float pos_x, float pos_y, float pos_z, float length, float width, f
 
 void e_Box::AddData(e_Scene& scene) {
 
+	for (int i = 0; i < EntitySize; i++) {
+		scene.DataBuffers[VectorPos].push_back(0);
+	}
+
 	this->pos_x.Set(&scene);
 
 	this->pos_y.Set(&scene);
@@ -87,7 +91,9 @@ void e_Box::AddData(e_Scene& scene) {
 
 	this->blue.Set(&scene);
 
-	Entity::Generate_ID<e_Box>(&scene, ID, Index);
+	Index = scene.Boxes.size();
+
+	scene.Boxes.push_back(this);
 
 	//this code sets the code in the data buffer to the starting val of the attributes, using the equals operator overload.
 
@@ -110,6 +116,9 @@ void e_Box::AddData(e_Scene& scene) {
 }
 
 void e_Box::Remove(e_Scene& scene) {
-	Entity::DataBuffer_Remove<e_Box>(&scene, ID, Index);
+	for (int i = Index + 1; i < scene.Boxes.size(); i++) {
+		scene.Boxes[i]->Index -= 1;
+	}
+	Entity::DataBuffer_Remove<e_Box>(&scene, Index);
 }
 

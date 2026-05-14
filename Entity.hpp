@@ -66,46 +66,30 @@ protected:
 	}
 
 	template<typename T>
-	static void DataBuffer_Remove(e_Scene* scene, unsigned int& ID, unsigned int& Index) {
-		// Required in case of any instance buffer deletions
-		if (Index >= scene->ObjectIDs[T::VectorPos].size() or scene->ObjectIDs[T::VectorPos][Index] != ID) { Index = BinarySearch(scene->ObjectIDs[T::VectorPos], ID); }
-
-		//Required if called on deleted Object
-		if (Index == 4294967295) return;
-
-		//Removes object id from Objectid array;
-		scene->ObjectIDs[T::VectorPos].erase(scene->ObjectIDs[T::VectorPos].begin() + Index);
+	static void DataBuffer_Remove(e_Scene* scene, unsigned int& Index) {
+		
+		//subtracts every sphere index, that was in front of deleted sphere by one.
+		
 
 		//removes info from instance buffer, stop rendering the torus.
-		scene->ObjectIDs[T::VectorPos].erase(scene->ObjectIDs[T::VectorPos].begin() + Index * T::EntitySize, scene->ObjectIDs[T::VectorPos].begin() + Index * T::EntitySize + T::EntitySize);
+		scene->DataBuffers[T::VectorPos].erase(scene->DataBuffers[T::VectorPos].begin() + Index * T::EntitySize,
+			scene->DataBuffers[T::VectorPos].begin() + Index * T::EntitySize + T::EntitySize);
 
-		ID = NULL;
+		//remoe pointer to objet
+
+		if constexpr (std::is_same_v<T, e_Sphere>) { scene->Spheres.erase(scene->Spheres.begin() + Index);}
+		if constexpr (std::is_same_v<T, e_Box>) { scene->Boxes.erase(scene->Boxes.begin() + Index);}
+
 	}
 
 	
 	template<typename Primitive, typename T>
 	static void Render(e_Window* win, e_Scene* scene, std::vector<T*> D_Objects) {
-		unsigned int NumInstances = scene->ObjectIDs[Primitive::VectorPos].size();
+		unsigned int NumInstances;
 
-		//lsps
-		//shadowmaps
+		if constexpr (std::is_same_v<Primitive, e_Sphere>){NumInstances = scene->Spheres.size();}
+		if constexpr (std::is_same_v<Primitive, e_Box>) { NumInstances = scene->Boxes.size(); }
 
-		// Bind textures to texture units
-		/*
-		for (int i = 0; i < D_Objects.size(); i++) {
-
-			GLint uloc_lsp = win->Shader[Primitive::VectorPos].GetUniformLocation("lightSpaceMatrix[" + std::to_string(i) + "]");
-			win->Shader[Primitive::VectorPos].SetMat4(uloc_lsp, glm::value_ptr(D_Objects[i]->lightSpaceMatrix));
-
-			GLint uloc_smpID = win->Shader[Primitive::VectorPos].GetUniformLocation("shadowMaps[" + std::to_string(i) + "]");
-			win->Shader[Primitive::VectorPos].SetInt(uloc_smpID, i);
-
-			glActiveTexture(GL_TEXTURE0 + i);
-			glBindTexture(GL_TEXTURE_2D, scene->DepthMaps[i]);
-
-			//std::cout << i << '\n';
-		}
-		*/
 
 		win->Shader[Primitive::VectorPos].Use();
 

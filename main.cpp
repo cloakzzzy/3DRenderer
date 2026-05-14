@@ -28,14 +28,22 @@ int main()
         win.GetAspect(), 0.2, 200.f);
 
 
-    e_Sphere s = e.CreateSphere(0.0f, 10.0f, 1.0f, 0.5f, 0.f, 255.f, 0.f);
-    scene.Add(s);
-    e_Sphere s1 = e.CreateSphere(-10.0f, 1.0f, 1.0f, 1.0f, 0.f, 0.f, 128.f);
+    e_Sphere s1 = e.CreateSphere(0.0f, 10.0f, 5.0f, 1.f, 255, 255, 255);
     scene.Add(s1);
-    e_Sphere s3 = e.CreateSphere(1.0f, 10.0f, 0.f, 2.0f, 128, 0.f, 0.f);
+
+    e_Sphere s2 = e.CreateSphere(0.0f, 1.0f, -10.0f, 2.f, 255, 255, 0);
+    scene.Add(s2);
+
+    e_Sphere s3 = e.CreateSphere(0.0f, 10.0f, -10.0f, 2.f, 0.f, 0, 255);
     scene.Add(s3);
-    e_Sphere s4 = e.CreateSphere(0.f, 4.0f, 0.f, 1.5f, 128, 128, 128.f);
+
+    e_Sphere s4 = e.CreateSphere(-10.f, 10.0f, -10.0f, 2.f, 255, 0.f, 0.f);
     scene.Add(s4);
+
+    e_Sphere s5 = e.CreateSphere(0.f, 0.f, -10.0f, 3.f, 0.f, 255, 0.f);
+    scene.Add(s5);
+
+    scene.Remove(s3);
 
     e_Box box = e.CreateBox(
         5.0f, 7.f, 5.0f,
@@ -47,17 +55,27 @@ int main()
         -3.f, 5.f, 5.0f,
         2.f, 1.f, 1.f,
         0.f, 0.f,
-        128.f, 128, 0.f);
+        128.f,0, 0.f);
 
     e_Box box3 = e.CreateBox(
         -5.0f, 10.f, 5.0f,
         2.f, 1.f, 1.f,
+        0.f, 0.f,
+        0.f, 128, 0.f);
+
+    e_Box box4 = e.CreateBox(
+        -5.0f, 4.f, 5.0f,
+        2.f, 4.f, 1.f,
         0.f, 0.f,
         0.f, 128, 128.f);
 
     scene.Add(box);
     scene.Add(box2);
     scene.Add(box3);
+    scene.Add(box4);
+
+    scene.Remove(box3);
+
 
     e_DirectionalLight light = e.CreateDirectionalLight(0, 1.0, 0.3f);
     e_DirectionalLight light2 = e.CreateDirectionalLight(0.707f, 0.707f, 0.707f);
@@ -78,11 +96,15 @@ int main()
         box3.rot_x += 1.0f;
         box3.rot_y += 1.0f;
 
+        box.pos_x += 0.02f;
+        box2.pos_z += 0.02f;
+        box4.pos_y += 0.03f;
+
         win.Render(scene);
 
 
-
-
+        s4.pos_y += 0.02f;
+        s2.pos_x += 0.01f;
     }
 
 }

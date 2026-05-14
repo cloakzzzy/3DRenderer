@@ -38,6 +38,9 @@ class e_Scene {
 
 	inline static std::vector<e_DirectionalLight*> D_Objects;
 
+	std::vector<e_Sphere*> Spheres;
+	std::vector<e_Box*> Boxes;
+
 	inline static std::vector<unsigned int> DepthMaps;
 
 	inline static std::vector<unsigned int> i{ 0, 1, 2 };
@@ -65,6 +68,8 @@ public:
 	void Add(e_DirectionalLight& directionallight);
 
 	void Remove(e_Sphere& sphere);
+
+	void Remove(e_Box& box);
 
 
 };

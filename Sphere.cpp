@@ -94,7 +94,11 @@ e_Sphere::e_Sphere(float pos_x, float pos_y, float pos_z, float radius, uint8_t 
 	this->blue.Value = blue;
 }
 
-void e_Sphere::AddData(e_Scene& scene, float pos_x, float pos_y, float pos_z, float radius, uint8_t red, uint8_t green, uint8_t blue) {
+void e_Sphere::AddData(e_Scene& scene, float pos_x, float pos_y, float pos_z, float radius, unsigned char red, unsigned char green, unsigned char blue) {
+
+	for (int i = 0; i < EntitySize; i++) {
+		scene.DataBuffers[VectorPos].push_back(0);
+	}
 
 	this->pos_x.Set(&scene);
 
@@ -110,10 +114,10 @@ void e_Sphere::AddData(e_Scene& scene, float pos_x, float pos_y, float pos_z, fl
 
 	this->blue.Set(&scene);
 
-	Entity::Generate_ID<e_Sphere>(&scene, ID, Index);
+	Index = scene.Spheres.size();
 
-	//this code sets the code in the data buffer to the starting val of the attributes, using the equals operator overload.
-
+	scene.Spheres.push_back(this);
+	
 	this->pos_x = this->pos_x;
 	this->pos_y = this->pos_y;
 	this->pos_z = this->pos_z;
@@ -121,13 +125,19 @@ void e_Sphere::AddData(e_Scene& scene, float pos_x, float pos_y, float pos_z, fl
 	this->radius = this->radius;
 
 	this->red = this->red;
-	this->green = this->green;
-	this->blue = this->blue;
+    this->green = this->green;
+   this->blue = this->blue;
 
 
 }
 
 void e_Sphere::Remove(e_Scene& scene) {
-	Entity::DataBuffer_Remove<e_Sphere>(&scene, ID, Index);
+
+	for (int i = Index + 1; i < scene.Spheres.size(); i++) {scene.Spheres[i]->Index -= 1;}
+
+	Entity::DataBuffer_Remove<e_Sphere>(&scene, Index);
+
+	
 }
+
 

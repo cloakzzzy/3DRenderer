@@ -12,25 +12,23 @@ C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(20,66): war
 C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(20,61): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(20,56): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(28,26): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(31,70): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(31,63): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(31,58): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(33,70): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(33,65): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(33,60): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(35,68): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(35,63): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(37,66): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(44,19): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(44,14): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(44,9): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(50,21): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(50,9): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(56,19): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(56,9): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(37,60): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(40,71): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(40,66): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(43,67): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(43,57): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(52,19): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(52,14): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(52,9): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(58,18): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(58,9): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(64,19): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(64,9): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(70,19): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\main.cpp(70,9): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
   Generating code
-  Previous IPDB and IOBJ mismatch, fall back to full compilation.
-C:\Users\hamza\source\repos\revisedrenderer\revisedrenderer\Window.cpp(204): warning C4715: 'e_Window::AllWindowsOpen': not all control paths return a value
-  All 1038 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  18 of 1165 functions ( 1.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   revisedrenderer.vcxproj -> C:\Users\hamza\source\repos\revisedrenderer\Release\revisedrenderer.exe

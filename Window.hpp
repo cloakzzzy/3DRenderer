@@ -68,6 +68,7 @@ class e_Window {
 	SDL_GLContext glContext;
 	e_Scene* Scene;
 
+
 	float VirtualX, VirtualY;
 
 	double DeltaTime = 0.0;
